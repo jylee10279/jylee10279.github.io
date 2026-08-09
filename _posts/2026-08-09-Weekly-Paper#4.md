@@ -29,7 +29,7 @@ tags: [AI, cs]
 
   `Tensor`: 인공신경망(Neural Network) 구축, 딥러닝 모델 학습 및 추론에 최적화된 데이터 형태입니다.
 
-### 한눈에 보는 비교표
+### 한눈에 보는 요약표  
 
 | 구분 | NumPy `Array` | PyTorch `Tensor` |
 | :--- | :--- | :--- |
@@ -37,8 +37,10 @@ tags: [AI, cs]
 | **연산 장치** | CPU 전용 | CPU & GPU 모두 지원 |
 | **자동 미분** | 지원 안 함 | 지원(`autograd`) |
 | **주 목적** | 데이터 전처리 및 수치 연산 | 딥러닝 모델 구현 및 학습 |
----
-# `CNN(Convolutional Neural Network)`
+
+
+# CNN(Convolutional Neural Network)
+
 `CNN`은 이미지와 같은 컴퓨터 비전 분야의 데이터를 분석하기 위해 사용되는 인공 신경망의 한 종류입니다.  
 파라미터 수의 증가, 지역 정보 손실 등 기존 `FCN(Fully Connected Network)`의 한계로 등장했습니다.  
 데이터의 지역적인 특성을 추출하는 데 특화되어 있습니다. 
@@ -91,7 +93,7 @@ Output 레이어에서 보통 Softmax 함수(다중 클래스 분류)나 Sigmoid
 | 레이어 (Layer) | 주요 역할 | 핵심 특징 및 키워드 |
 | :--- | :--- | :--- |
 | **Convolution Layer** | 이미지의 주요 특징(Feature) 추출 | • 필터(Filter/Kernel)가 이미지를 훑으며 연산<br>• 초반: 선/점 추출, 후반: 복잡한 형태 추출 |
-| **Activation Layer (ReLU)** | 신경망에 비선형성(Non-linearity) 부여 | • $0$ 이하의 값은 $0$으로, 양수는 그대로 전달<br>• 복잡한 이미지 패턴 학습에 필수 |
+| **Activation Layer (ReLU)** | 신경망에 비선형성(Non-linearity) 부여 | • $0$ 이하의 값은 0으로, 양수는 그대로 전달<br>• 복잡한 이미지 패턴 학습에 필수 |
 | **Pooling Layer** | 특징 맵의 크기 축소 (Down-sampling) | • **Max Pooling**: 가장 도드라지는 특징만 선택<br>• 연산량 감소 및 위치 변형에 강해짐 |
 | **Flatten Layer** | 다차원 데이터를 1차원 데이터로 변환 | • 2D/3D 특징 맵을 한 줄로 쫙 펼침<br>• Fully Connected Layer 연결 전 필수 단계 |
 | **Fully Connected Layer** | 추출된 특징을 종합하여 최종 클래스 분류 | • 일반적인 인공신경망(ANN) 구조<br>• Softmax/Sigmoid를 통해 최종 확률 출력 |
